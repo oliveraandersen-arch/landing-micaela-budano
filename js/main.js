@@ -3,6 +3,11 @@
 
   document.documentElement.classList.add("js");
 
+  // Respaldo: si algo falla al armar la página, todo el contenido igual se muestra.
+  setTimeout(function () {
+    document.querySelectorAll("[data-reveal]").forEach(function (e) { e.classList.add("is-in"); });
+  }, 2500);
+
   var S = window.SITIO;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
