@@ -477,3 +477,14 @@ p { margin: 0; }
   .hero-title .line > span { transform: none; }
   .hero-media img, .project-hero img { transform: none; }
 }
+
+/* Equipo: foto chica, sin protagonismo */
+.member-foto { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex: none; margin-right: 1rem; }
+.member-card summary { display: flex; align-items: center; }
+
+/* Antes y después: nota de vistas generales */
+.before-after .ba-note { color: var(--tinta-suave); font-size: .95rem; margin: .25rem 0 1.25rem; padding: 0 var(--gutter); max-width: 62ch; }
+
+/* Antes y después: la fachada ocupa el ancho completo */
+.ba-item--feature { grid-column: 1 / -1; }
+@media (min-width: 760px) { .compare--wide { aspect-ratio: 16 / 9; } }

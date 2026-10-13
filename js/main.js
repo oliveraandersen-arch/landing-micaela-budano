@@ -191,6 +191,7 @@
       eq.appendChild(el("li", { class: "member reveal", "data-reveal": "" }, [
         el("details", { class: "member-card" }, [
           el("summary", null, [
+            m.foto ? el("img", { class: "member-foto", src: m.foto, alt: "", loading: "lazy" }) : null,
             el("span", { class: "member-name", text: m.nombre }),
             el("span", { class: "member-rol", text: m.rol })
           ]),
@@ -207,8 +208,6 @@
     var wa = $("contacto-wa"); if (wa) wa.href = c.whatsapp;
     var mail = $("contacto-mail");
     if (mail) { mail.href = "mailto:" + c.email; mail.textContent = c.email; }
-    var cal = $("contacto-cal");
-    if (cal && c.calendly) { cal.href = c.calendly; cal.hidden = false; }
     setText("contacto-cobertura", c.cobertura);
 
     // Imagen del hero: la portada es la del primer proyecto publicado
@@ -221,7 +220,7 @@
       type: "range", min: "0", max: "100", value: "50", class: "cmp-range",
       "aria-label": "Deslizar para comparar antes y después: " + par.etiqueta
     });
-    var box = el("figure", { class: "compare", style: "--pos:50%" }, [
+    var box = el("figure", { class: "compare" + (par.destacado ? " compare--wide" : ""), style: "--pos:50%" }, [
       el("img", { class: "cmp-after", src: par.despues, alt: par.alt + " (después)", loading: "lazy" }),
       el("img", { class: "cmp-before", src: par.antes, alt: par.alt + " (antes)", loading: "lazy" }),
       el("span", { class: "cmp-label cmp-l", "aria-hidden": "true", text: "Antes" }),
@@ -232,7 +231,7 @@
     range.addEventListener("input", function () {
       box.style.setProperty("--pos", range.value + "%");
     });
-    return el("div", { class: "ba-item" }, [
+    return el("div", { class: "ba-item" + (par.destacado ? " ba-item--feature" : "") }, [
       el("p", { class: "ba-tag", text: par.etiqueta }),
       box
     ]);
@@ -328,6 +327,11 @@
         if (p.antesDespues.pares && p.antesDespues.pares.length) {
           bloqueAD.push(el("p", { class: "ba-hint", text: "Deslizá para comparar." }));
           bloqueAD.push(el("div", { class: "ba-list" }, p.antesDespues.pares.map(compareSlider)));
+        }
+        if (p.antesDespues.generales && p.antesDespues.generales.length) {
+          bloqueAD.push(el("p", { class: "ba-hint ba-sub", text: "Vistas generales" }));
+          bloqueAD.push(el("p", { class: "ba-note", text: "Son espacios distintos: muestran el cambio de carácter de la casa, no el mismo rincón." }));
+          bloqueAD.push(el("div", { class: "ba-list" }, p.antesDespues.generales.map(compareSlider)));
         }
         if (p.antesDespues.estadoOriginal && p.antesDespues.estadoOriginal.length) {
           bloqueAD.push(el("p", { class: "ba-hint ba-sub", text: "Estado original de la casa" }));

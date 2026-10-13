@@ -88,15 +88,19 @@ window.SITIO = {
       // Antes y después. Solo se compara en deslizador cuando la toma coincide.
       // El resto de las fotos "antes" se muestran como estado original.
       antesDespues: {
+        // Fachada: comparación destacada, misma toma.
         pares: [
-          { etiqueta: "Fachada", antes: "assets/img/cj/antes-fachada.jpg", despues: "assets/img/cj/thumb.jpg", alt: "Fachada antes y después de la remodelación, Casa CJ" }
+          { etiqueta: "Fachada", destacado: true, antes: "assets/img/cj/antes-fachada.jpg", despues: "assets/img/cj/thumb.jpg", alt: "Fachada antes y después de la remodelación, Casa CJ" }
+        ],
+        // Vistas generales: espacios distintos, para ver el cambio de carácter.
+        generales: [
+          { etiqueta: "Patio posterior", antes: "assets/img/cj/antes-patio.jpg", despues: "assets/img/cj/05.jpg", alt: "Vista general del patio posterior, Casa CJ" },
+          { etiqueta: "Living", antes: "assets/img/cj/antes-living.jpg", despues: "assets/img/cj/10.jpg", alt: "Vista general del living, Casa CJ" },
+          { etiqueta: "Escalera y hall", antes: "assets/img/cj/antes-escalera.jpg", despues: "assets/img/cj/08.jpg", alt: "Vista general de la escalera y el hall, Casa CJ" }
         ],
         estadoOriginal: [
           { src: "assets/img/cj/antes-acceso.jpg", alt: "Acceso antes de la remodelación, Casa CJ" },
-          { src: "assets/img/cj/antes-patio.jpg", alt: "Patio posterior antes de la remodelación, Casa CJ" },
-          { src: "assets/img/cj/antes-escalera.jpg", alt: "Escalera y hall antes de la remodelación, Casa CJ" },
           { src: "assets/img/cj/antes-cocina.jpg", alt: "Cocina antes de la remodelación, Casa CJ" },
-          { src: "assets/img/cj/antes-living.jpg", alt: "Living antes de la remodelación, Casa CJ" },
           { src: "assets/img/cj/antes-living-2.jpg", alt: "Living con chimenea antes de la remodelación, Casa CJ" },
           { src: "assets/img/cj/antes-estar-alto.jpg", alt: "Estar en altura antes de la remodelación, Casa CJ" }
         ]
@@ -158,30 +162,24 @@ window.SITIO = {
       id: "ft",
       titulo: "Casa FT",
       subtitulo: "La arquitectura proyectada para la vida real",
-      tipo: "Arquitectura residencial · Visualización 3D",
+      tipo: "Arquitectura residencial",
       lugar: "Barrio El Terrón, Mendiolaza",
       anio: 2024,
       publicado: true,
       thumb: "assets/img/ft/thumb.jpg",
-      thumbCaption: "Visualización 3D",
       resumen: "Una vivienda unifamiliar diseñada desde cero, con una planta baja conectada y sectorizada alrededor de un patio de luz interior.",
       cuerpo: [
         "La intervención principal se enfocó en el centro de la casa: un patio de luz interior, bordeado por una escalera, que organiza el espacio y separa sutilmente los ambientes.",
         "Para dar identidad y calidez, evitamos el diseño genérico y nos enfocamos en el estilo de vida de los clientes. Una chimenea en doble altura funciona como punto de encuentro, y una vinoteca expuesta se transformó en el corazón del comedor. La planta baja se abre a una gran galería que recorre la vivienda, y en la planta alta, un dormitorio principal con balcón privado mira a las montañas."
       ],
       galeria: [
-        { src: "assets/img/ft/01.jpg", alt: "Visualización 3D de la fachada con galería y vegetación, Casa FT" },
-        { src: "assets/img/ft/02.jpg", alt: "Visualización 3D del comedor con vinoteca, Casa FT" }
+        { src: "assets/img/ft/01.jpg", alt: "Living con doble altura, chimenea y biblioteca, Casa FT" },
+        { src: "assets/img/ft/02.jpg", alt: "Cocina de madera y gris con isla y vista al jardín, Casa FT" },
+        { src: "assets/img/ft/03.jpg", alt: "Living con sofás y ventanales al exterior, Casa FT" }
       ],
-      galeriaCaption: "Visualizaciones 3D del proyecto",
       antesDespues: null,
       planos: []
-    }
-  ],
-
-  // Proyectos hechos junto a otros profesionales. Se listan con el equipo
-  // y el aporte de Micaela, sin atribuirle el trabajo completo.
-  colaboraciones: [
+    },
     {
       id: "rie",
       titulo: "Consultorios RIE",
@@ -190,8 +188,6 @@ window.SITIO = {
       lugar: "Barrio Centro, Villa María",
       anio: 2018,
       publicado: true,
-      equipo: "Proyecto de is.ARCH junto al Arq. Francisco Tamantini Z.",
-      aporte: null, // pendiente: confirmar el aporte puntual de Micaela
       thumb: "assets/img/rie/thumb.jpg",
       cuerpo: [
         "En un momento en que los espacios de salud todavía se aferraban a la estética clínica de blanco y turquesa, este proyecto nació con la premisa de crear una experiencia más cercana, de impronta profesional y pulcra, con gestos de diseño que aporten calidez.",
@@ -201,14 +197,21 @@ window.SITIO = {
         { src: "assets/img/rie/02.jpg", alt: "Recepción con flores y muro de madera, Consultorios RIE" },
         { src: "assets/img/rie/03.jpg", alt: "Recepción con puerta de vidrio y madera, Consultorios RIE" },
         { src: "assets/img/rie/04.jpg", alt: "Sala de espera moderna y minimalista, Consultorios RIE" }
-      ]
+      ],
+      antesDespues: null,
+      planos: []
     }
   ],
+
+  // Proyectos hechos junto a otros profesionales. Vacío por ahora.
+  // Cuando haya uno, se listan con el equipo y el aporte de Micaela.
+  colaboraciones: [],
 
   // Equipo. La bio desplegable se muestra al hacer clic.
   equipo: [
     {
       nombre: "Arq. Micaela Budano",
+      foto: "assets/img/equipo/micaela.jpg",
       rol: "Dirección de proyectos, acompañamiento al cliente, interiorismo & visualizaciones",
       bio: "Acompaña a cada cliente durante todo el proceso, guiando el diseño desde una mirada sensible del espacio integral. Coordina las reuniones y desarrolla las visualizaciones tridimensionales que permiten anticipar cómo se verá cada ambiente, asegurando que cada decisión técnica y material refleje fielmente la forma en que deseás habitar tu hogar.",
       trayectoria: [
@@ -284,7 +287,6 @@ window.SITIO = {
     whatsappTexto: "Escribinos por WhatsApp",
     email: "micabudano@hotmail.com",
     instagram: "https://www.instagram.com/is.arch.arq/",
-    calendly: null, // pendiente: link de Calendly
     cobertura: "Modalidad 100% virtual para todo el país. Presencial en Córdoba y alrededores.",
     ubicacion: "Mendiolaza, Córdoba"
   },
