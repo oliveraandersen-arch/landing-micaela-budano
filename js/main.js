@@ -34,24 +34,13 @@
 
     // Hero
     setText("hero-rol", S.hero.rol);
-    setText("hero-titulo-frase", S.hero.titulo);
     setText("hero-bajada", S.hero.bajada);
-
-    // Mirada (manifiesto): cada frase se revela al entrar en pantalla
-    var man = $("manifiesto");
-    if (man) {
-      S.manifiesto.forEach(function (frase, i) {
-        man.appendChild(el("p", { class: i === S.manifiesto.length - 1 ? "m-line m-close" : "m-line", "data-reveal": "" }, [
-          document.createTextNode(frase)
-        ]));
-      });
-    }
 
     // Índice de proyectos + vista previa que sigue al cursor
     var indice = $("indice-proyectos");
     var publicados = S.proyectos.filter(function (p) { return p.publicado; });
     publicados.forEach(function (p) {
-      var row = el("a", { class: "index-row", href: "proyecto.html?id=" + encodeURIComponent(p.id), "data-thumb": p.thumb }, [
+      var row = el("a", { class: "index-row", href: "proyecto.html?id=" + encodeURIComponent(p.id), "data-thumb": p.thumb, "data-caption": p.titulo + " · " + p.lugar }, [
         el("span", { class: "index-title", text: p.titulo }),
         el("span", { class: "index-sub", text: p.subtitulo }),
         el("span", { class: "index-meta", text: meta([p.tipo, p.lugar, p.anio]) })
@@ -77,6 +66,7 @@
         var row = e.target.closest(".index-row");
         if (!row) return;
         previewImg.src = row.getAttribute("data-thumb");
+        preview.querySelector(".cp-cap").textContent = row.getAttribute("data-caption");
         preview.classList.add("is-on");
         active = true;
       });
@@ -113,59 +103,6 @@
       });
     }
 
-    // Servicios (acordeón)
-    var serv = $("lista-servicios");
-    S.servicios.forEach(function (s, i) {
-      var id = "srv-" + i;
-      var btn = el("button", { class: "acc-btn", type: "button", "aria-expanded": "false", "aria-controls": id }, [
-        el("span", { class: "acc-title", text: s.titulo }),
-        el("span", { class: "acc-icon", "aria-hidden": "true" })
-      ]);
-      var panel = el("div", { class: "acc-panel", id: id, hidden: "" }, [
-        el("p", { text: s.texto }),
-        s.enlace ? el("a", { class: "text-link", href: s.enlace, text: "Ver etapas" }) : null
-      ]);
-      btn.addEventListener("click", function () {
-        var open = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", String(!open));
-        panel.hidden = open;
-        li.classList.toggle("is-open", !open);
-      });
-      var li = el("li", { class: "acc reveal", "data-reveal": "" }, [btn, panel]);
-      serv.appendChild(li);
-    });
-
-    // Interiorismo
-    setText("int-sub", S.interiorismo.subtitulo);
-    setText("int-vision-t", S.interiorismo.visionTitulo);
-    setText("int-vision", S.interiorismo.vision);
-    var mods = $("int-modalidades");
-    S.interiorismo.modalidades.forEach(function (m) {
-      mods.appendChild(el("li", null, [
-        el("p", { class: "mod-tipo", text: m.tipo }),
-        el("h3", { class: "h-small", text: m.titulo }),
-        el("p", { text: m.texto })
-      ]));
-    });
-    buildStepper("int-pasos", "int-panel", S.interiorismo.pasos);
-
-    // Paisajismo
-    setText("pai-sub", S.paisajismo.subtitulo);
-    buildStepper("pai-pasos", "pai-panel", S.paisajismo.pasos);
-
-    // Proceso
-    var proc = $("lista-proceso");
-    S.proceso.forEach(function (p, i) {
-      proc.appendChild(el("li", { class: "step reveal", "data-reveal": "" }, [
-        el("span", { class: "step-n", text: "0" + (i + 1) }),
-        el("div", null, [
-          el("p", { class: "step-tag", text: p.etiqueta }),
-          el("h3", { class: "h-card", text: p.titulo }),
-          el("p", { text: p.texto })
-        ])
-      ]));
-    });
-
     // Trayectoria (CV de Micaela)
     var perfil = S.perfil;
     setText("perfil-bio", perfil.bio);
@@ -186,13 +123,10 @@
 
     // Contacto
     var c = S.contacto;
-    setText("t-contacto", c.titulo);
     var th = $("t-contacto"); if (th) th.textContent = c.titulo;
-    setText("contacto-texto", c.texto);
     var wa = $("contacto-wa"); if (wa) wa.href = c.whatsapp;
     var mail = $("contacto-mail");
     if (mail) { mail.href = "mailto:" + c.email; mail.textContent = c.email; }
-    setText("contacto-cobertura", c.cobertura);
 
   }
 
@@ -219,40 +153,6 @@
     ]);
   }
 
-  // Stepper compartido (interiorismo y paisajismo)
-  function buildStepper(listId, panelId, pasos) {
-    var list = $(listId), panel = $(panelId);
-    if (!list || !panel) return;
-    list.removeAttribute("role");
-    var buttons = [];
-    function show(i) {
-      buttons.forEach(function (b, j) {
-        b.setAttribute("aria-pressed", String(i === j));
-        b.parentNode.classList.toggle("is-active", i === j);
-      });
-      var p = pasos[i];
-      panel.classList.remove("is-in");
-      // Pequeño retardo para que el cambio de texto se note
-      setTimeout(function () {
-        panel.innerHTML = "";
-        panel.appendChild(el("p", { class: "step-tag", text: p.etiqueta }));
-        panel.appendChild(el("h3", { class: "h-card", text: p.titulo }));
-        panel.appendChild(el("p", { text: p.texto }));
-        requestAnimationFrame(function () { panel.classList.add("is-in"); });
-      }, reduce ? 0 : 160);
-    }
-    pasos.forEach(function (p, i) {
-      var b = el("button", { type: "button", class: "stepper-btn", "aria-pressed": "false" }, [
-        el("span", { class: "stepper-n", text: "0" + (i + 1) }),
-        el("span", { text: p.titulo })
-      ]);
-      b.addEventListener("click", function () { show(i); });
-      buttons.push(b);
-      list.appendChild(el("li", null, [b]));
-    });
-    show(0);
-  }
-
   // =====================================================
   //  PÁGINA DE PROYECTO
   // =====================================================
@@ -266,7 +166,7 @@
     if (!p) {
       if (aviso) aviso.hidden = false;
     } else {
-      document.title = p.titulo + " · is.ARCH";
+      document.title = p.titulo + " · Micaela Budano";
       var heroSrc = p.thumb;
       var gal = p.galeria || [];
       if (!gal.length) gal = [];

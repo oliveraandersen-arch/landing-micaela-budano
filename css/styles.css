@@ -494,3 +494,9 @@ p { margin: 0; }
 .hero-media img[src*="equipo"] { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; height: auto; }
 .perfil-detalle .h-small { margin: 2.25rem 0 1rem; }
 .perfil-detalle .timeline { margin-bottom: 0; }
+
+/* Vista previa al pasar el mouse: marco y nombre del proyecto */
+.cursor-preview { padding: 8px 8px 10px; background: var(--lino); border: 1px solid var(--piedra); box-shadow: 0 18px 40px rgba(46, 42, 38, .16); }
+.cursor-preview img { display: block; width: 280px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.cp-cap { display: block; margin-top: 8px; font-size: .8rem; letter-spacing: .04em; color: var(--tinta-suave); }
+.cursor-preview { height: auto; min-height: 0; }
