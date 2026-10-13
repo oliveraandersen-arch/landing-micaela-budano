@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>is.ARCH · Arquitectura, interiorismo y paisaje en Córdoba</title>
+  <meta name="description" content="is.ARCH: arquitectura, interiorismo y paisajismo en Córdoba. Remodelaciones, proyectos residenciales, legajos técnicos y visualización 3D.">
+  <meta property="og:title" content="is.ARCH · Arquitectura en Córdoba">
+  <meta property="og:description" content="Cada lugar tiene algo que decir antes de que lleguemos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#inicio">Ir al contenido</a>
+
+<header class="site-header" data-header>
+  <a class="wordmark" href="#inicio" aria-label="is.ARCH, inicio">is.ARCH</a>
+  <nav class="site-nav" aria-label="Principal">
+    <a href="#proyectos">Proyectos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#contacto" class="nav-cta">Contacto</a>
+  </nav>
+</header>
+
+<main id="inicio">
+
+  <!-- ============ Inicio ============ -->
+  <section class="hero" aria-labelledby="hero-titulo">
+    <div class="hero-copy">
+      <h1 id="hero-titulo" class="hero-title">
+        <span class="line"><span>Cada lugar tiene algo que decir</span></span>
+        <span class="line"><span>antes de que lleguemos</span></span>
+      </h1>
+      <p class="hero-sub reveal" data-reveal>Lo nuevo también puede tener historia.</p>
+      <p class="hero-bajada reveal" data-reveal id="hero-bajada"></p>
+      <a class="btn btn-magnetic reveal" data-reveal href="#contacto">
+        <span>Hablemos de tu idea</span>
+      </a>
+    </div>
+    <figure class="hero-media reveal" data-reveal>
+      <img id="hero-img" src="assets/img/cj/thumb.jpg" alt="Fachada de piedra y madera de Casa CJ, Barrio Jockey Club, Córdoba" width="1672" height="941">
+    </figure>
+  </section>
+
+  <!-- ============ Mirada ============ -->
+  <section class="manifesto" aria-label="Nuestra mirada">
+    <p class="manifesto-kicker reveal" data-reveal>Nuestra mirada</p>
+    <div class="manifesto-body" id="manifiesto"></div>
+  </section>
+
+  <!-- ============ Proyectos propios ============ -->
+  <section id="proyectos" class="block" aria-labelledby="t-proyectos">
+    <header class="block-head reveal" data-reveal>
+      <h2 id="t-proyectos">Proyectos</h2>
+      <p class="block-note">Obras y proyectos del estudio, con su lugar y año.</p>
+    </header>
+    <ul class="project-index" id="indice-proyectos"></ul>
+    <div class="cursor-preview" id="cursor-preview" aria-hidden="true"><img alt=""></div>
+  </section>
+
+  <!-- ============ En conjunto ============ -->
+  <section id="colaboraciones" class="block" aria-labelledby="t-colab">
+    <header class="block-head reveal" data-reveal>
+      <h2 id="t-colab">Proyectos en conjunto</h2>
+      <p class="block-note">Trabajos realizados junto a otros profesionales. Se indica el equipo y el aporte de cada parte.</p>
+    </header>
+    <ul class="collab-list" id="lista-colab"></ul>
+  </section>
+
+  <!-- ============ Servicios ============ -->
+  <section id="servicios" class="block" aria-labelledby="t-servicios">
+    <header class="block-head reveal" data-reveal>
+      <h2 id="t-servicios">Servicios</h2>
+    </header>
+    <ul class="accordion" id="lista-servicios"></ul>
+  </section>
+
+  <!-- ============ Interiorismo ============ -->
+  <section id="interiorismo" class="block split" aria-labelledby="t-interiorismo">
+    <div class="split-intro reveal" data-reveal>
+      <h2 id="t-interiorismo" class="h-display">Interiorismo</h2>
+      <p class="lede" id="int-sub"></p>
+      <div class="int-vision">
+        <h3 class="h-small" id="int-vision-t"></h3>
+        <p id="int-vision"></p>
+      </div>
+      <ul class="modalidades" id="int-modalidades"></ul>
+    </div>
+    <div class="stepper" data-stepper>
+      <ol class="stepper-list" id="int-pasos" role="tablist" aria-label="Etapas del interiorismo"></ol>
+      <div class="stepper-panel" id="int-panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ Paisajismo ============ -->
+  <section id="paisajismo" class="block split split-flip" aria-labelledby="t-paisajismo">
+    <div class="split-intro reveal" data-reveal>
+      <h2 id="t-paisajismo" class="h-display">Paisajismo</h2>
+      <p class="lede" id="pai-sub"></p>
+    </div>
+    <div class="stepper" data-stepper>
+      <ol class="stepper-list" id="pai-pasos" role="tablist" aria-label="Etapas del paisajismo"></ol>
+      <div class="stepper-panel" id="pai-panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ============ Proceso ============ -->
+  <section id="proceso" class="block" aria-labelledby="t-proceso">
+    <header class="block-head reveal" data-reveal>
+      <h2 id="t-proceso">El paso a paso</h2>
+      <p class="block-note">Así trabajamos desde la primera charla hasta la obra.</p>
+    </header>
+    <ol class="process" id="lista-proceso"></ol>
+  </section>
+
+  <!-- ============ Equipo ============ -->
+  <section id="equipo" class="block" aria-labelledby="t-equipo">
+    <header class="block-head reveal" data-reveal>
+      <h2 id="t-equipo">Nuestro equipo</h2>
+      <p class="block-note">Un grupo de profesionales que entiende el diseño como un servicio al cuidado de las necesidades de cada cliente.</p>
+    </header>
+    <ul class="team" id="lista-equipo"></ul>
+  </section>
+
+  <!-- ============ Contacto ============ -->
+  <section id="contacto" class="block contact" aria-labelledby="t-contacto">
+    <div class="contact-inner reveal" data-reveal>
+      <h2 id="t-contacto" class="h-display"></h2>
+      <p class="lede" id="contacto-texto"></p>
+      <div class="contact-actions">
+        <a class="btn btn-magnetic" id="contacto-wa" href="#" rel="noopener" target="_blank"><span>Escribinos por WhatsApp</span></a>
+        <a class="btn btn-ghost" id="contacto-cal" href="#" rel="noopener" target="_blank" hidden><span>Agendá una reunión</span></a>
+      </div>
+      <ul class="contact-links">
+        <li><a id="contacto-mail" href="#">micabudano@hotmail.com</a></li>
+        <li><a href="https://www.instagram.com/is.arch.arq/" rel="noopener" target="_blank">Instagram · is.arch.arq</a></li>
+      </ul>
+      <p class="contact-foot" id="contacto-cobertura"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-line">is.ARCH · Mendiolaza, Córdoba</p>
+  <p>© <span id="anio"></span></p>
+</footer>
+
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
