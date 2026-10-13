@@ -257,6 +257,7 @@ window.SITIO = {
       {
         "cargo": "Co-fundadora y arquitecta proyectista",
         "lugar": "is.ARCH · Estudio de arquitectura integral",
+          "link": "https://www.instagram.com/is.arch.arq/",
         "periodo": "2023 – Actualidad"
       },
       {

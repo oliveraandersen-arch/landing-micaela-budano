@@ -119,7 +119,9 @@
           el("span", { class: "tl-cargo", text: t.cargo }),
           el("span", { class: "tl-periodo", text: t.periodo })
         ]),
-        el("p", { class: "tl-lugar", text: t.lugar })
+        el("p", { class: "tl-lugar" }, [
+          t.link ? el("a", { href: t.link, target: "_blank", rel: "noopener", text: t.lugar }) : document.createTextNode(t.lugar)
+        ])
       ]));
     });
     var fl = $("lista-formacion");
