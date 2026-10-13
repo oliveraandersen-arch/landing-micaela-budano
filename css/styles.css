@@ -488,3 +488,9 @@ p { margin: 0; }
 /* Antes y después: la fachada ocupa el ancho completo */
 .ba-item--feature { grid-column: 1 / -1; }
 @media (min-width: 760px) { .compare--wide { aspect-ratio: 16 / 9; } }
+
+/* Portada centrada en Micaela */
+.hero-rol { font-family: var(--f-display, "Jost", sans-serif); font-size: .9rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: .75rem; }
+.hero-media img[src*="equipo"] { aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; height: auto; }
+.perfil-detalle .h-small { margin: 2.25rem 0 1rem; }
+.perfil-detalle .timeline { margin-bottom: 0; }

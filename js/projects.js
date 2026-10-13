@@ -11,11 +11,15 @@
 window.SITIO = {
   estudio: "is.ARCH",
 
+  // Portfolio personal: Micaela es la protagonista. El estudio aparece como su ámbito.
   hero: {
+    nombre: "Micaela Budano",
+    rol: "Arquitecta · Proyectos, interiorismo y visualización 3D",
     titulo: "Cada lugar tiene algo que decir antes de que lleguemos",
     subtitulo: "Lo nuevo también puede tener historia.",
-    bajada: "Creamos espacios donde la arquitectura, el diseño interior y el paisaje conviven en armonía. Trabajamos junto a cada cliente para traducir sus necesidades en un proyecto técnico, ordenado y fiel a su forma de habitar.",
-    boton: "Hablemos de tu idea"
+    bajada: "Arquitecta en Córdoba. Acompaño a cada cliente desde la primera charla hasta la obra, para traducir sus necesidades en un proyecto técnico, ordenado y fiel a su forma de habitar.",
+    foto: "assets/img/equipo/micaela.jpg",
+    boton: "Hablemos de tu proyecto"
   },
 
   manifiesto: [
@@ -207,44 +211,25 @@ window.SITIO = {
   // Cuando haya uno, se listan con el equipo y el aporte de Micaela.
   colaboraciones: [],
 
-  // Equipo. La bio desplegable se muestra al hacer clic.
-  equipo: [
-    {
-      nombre: "Arq. Micaela Budano",
-      foto: "assets/img/equipo/micaela.jpg",
-      rol: "Dirección de proyectos, acompañamiento al cliente, interiorismo & visualizaciones",
-      bio: "Acompaña a cada cliente durante todo el proceso, guiando el diseño desde una mirada sensible del espacio integral. Coordina las reuniones y desarrolla las visualizaciones tridimensionales que permiten anticipar cómo se verá cada ambiente, asegurando que cada decisión técnica y material refleje fielmente la forma en que deseás habitar tu hogar.",
-      trayectoria: [
-        { cargo: "Co-fundadora y arquitecta proyectista", lugar: "is.ARCH · Estudio de arquitectura integral", periodo: "2023 – Actualidad" },
-        { cargo: "Arquitecta coordinadora del área de visualización", lugar: "3D Córdoba · Córdoba Capital", periodo: "2020 – 2024" },
-        { cargo: "Diseñadora y vendedora de mobiliario a medida", lugar: "Loft Tienda Estudio", periodo: "2020" },
-        { cargo: "Visualización arquitectónica", lugar: "Turner Arquitectos · Santiago de Chile", periodo: "2019" },
-        { cargo: "Arquitecta proyectista", lugar: "Urba Constructora · Villa María, Córdoba", periodo: "2017 – 2018" }
-      ],
-      formacion: [
-        "Arquitecta · Facultad de Arquitectura, Urbanismo y Diseño, UNC · 2011 – 2016 · Promedio 7,87",
-        "Formación pedagógica para adscriptos y ayudantes alumnos · UNC · 2015",
-        "Curso de diseño de mobiliario y carpintería · CAMMEC · 2018"
-      ],
-      software: "AutoCAD · SketchUp · Lumion · D5 Render · Photoshop"
-    },
-    {
-      nombre: "Arq. María Emilia De la Fuente",
-      rol: "Estudio funcional, programas de remodelación y diseño paisajístico",
-      bio: "Analiza en profundidad el funcionamiento de las remodelaciones y los nuevos programas arquitectónicos según las necesidades específicas de cada usuario. Desarrolla propuestas de diseño paisajístico que integran la estética funcional con el entorno natural, logrando una interacción fluida con el proyecto integral.",
-      trayectoria: [],
-      formacion: [],
-      software: null
-    },
-    {
-      nombre: "Arq. Francisco Tamantini Z.",
-      rol: "Desarrollo técnico, infraestructura y diseño de instalaciones",
-      bio: "Transforma las ideas en soluciones concretas, anticipando las necesidades de instalaciones y detalles constructivos del estudio. Lidera el control y seguimiento de la materialización de cada obra, e integra herramientas de inteligencia artificial para optimizar la documentación técnica y los procesos ejecutivos.",
-      trayectoria: [],
-      formacion: [],
-      software: null
-    }
-  ],
+  // Perfil profesional (CV de Micaela). Trayectoria tal como figura en su CV.
+  perfil: {
+    bio: "Acompaño a cada cliente durante todo el proceso, guiando el diseño desde una mirada sensible del espacio integral. Coordino las reuniones y desarrollo las visualizaciones tridimensionales que permiten anticipar cómo se verá cada ambiente, asegurando que cada decisión técnica y material refleje fielmente la forma en que querés habitar tu hogar.",
+    trayectoria: [
+      { cargo: "Co-fundadora y arquitecta proyectista", lugar: "is.ARCH · Estudio de arquitectura integral", periodo: "2023 – Actualidad" },
+      { cargo: "Arquitecta coordinadora del área de visualización", lugar: "3D Córdoba · Córdoba Capital", periodo: "2020 – 2024" },
+      { cargo: "Diseñadora y vendedora de mobiliario a medida", lugar: "Loft Tienda Estudio", periodo: "2020" },
+      { cargo: "Visualización arquitectónica", lugar: "Turner Arquitectos · Santiago de Chile", periodo: "2019" },
+      { cargo: "Arquitecta proyectista", lugar: "Urba Constructora · Villa María, Córdoba", periodo: "2017 – 2018" }
+    ],
+    formacion: [
+      "Arquitecta · Facultad de Arquitectura, Urbanismo y Diseño, UNC · 2011 – 2016 · Promedio 7,87",
+      "Formación pedagógica para adscriptos y ayudantes alumnos · UNC · 2015",
+      "Curso de diseño de mobiliario y carpintería · CAMMEC · 2018"
+    ],
+    software: "AutoCAD · SketchUp · Lumion · D5 Render · Photoshop",
+    // Quienes trabajan con ella en is.ARCH. Se mencionan en texto, sin protagonismo.
+    estudio: "Co-fundadora de is.ARCH junto a la Arq. María Emilia De la Fuente y el Arq. Francisco Tamantini Z."
+  },
 
   // Pasos del proceso general (secuencia real, por eso se numera).
   proceso: [

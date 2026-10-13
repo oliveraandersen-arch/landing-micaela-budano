@@ -33,8 +33,9 @@
   if (!document.body.classList.contains("project-page")) {
 
     // Hero
+    setText("hero-rol", S.hero.rol);
+    setText("hero-titulo-frase", S.hero.titulo);
     setText("hero-bajada", S.hero.bajada);
-    var heroImg = $("hero-img");
 
     // Mirada (manifiesto): cada frase se revela al entrar en pantalla
     var man = $("manifiesto");
@@ -165,40 +166,23 @@
       ]));
     });
 
-    // Equipo (perfil desplegable con <details>)
-    var eq = $("lista-equipo");
-    S.equipo.forEach(function (m) {
-      var detalle = [];
-      detalle.push(el("p", { class: "team-bio", text: m.bio }));
-      if (m.trayectoria && m.trayectoria.length) {
-        detalle.push(el("h4", { class: "h-small", text: "Trayectoria" }));
-        detalle.push(el("ol", { class: "timeline" }, m.trayectoria.map(function (t) {
-          return el("li", null, [
-            el("p", { class: "tl-head" }, [
-              el("span", { class: "tl-cargo", text: t.cargo + (t.aConfirmar ? " *" : "") }),
-              el("span", { class: "tl-periodo", text: t.periodo })
-            ]),
-            el("p", { class: "tl-lugar", text: t.lugar })
-          ]);
-        })));
-      }
-      if (m.formacion && m.formacion.length) {
-        detalle.push(el("h4", { class: "h-small", text: "Formación" }));
-        detalle.push(el("ul", { class: "plain-list" }, m.formacion.map(function (f) { return el("li", { text: f }); })));
-      }
-      if (m.software) detalle.push(el("p", { class: "tl-lugar", text: "Software: " + m.software }));
-
-      eq.appendChild(el("li", { class: "member reveal", "data-reveal": "" }, [
-        el("details", { class: "member-card" }, [
-          el("summary", null, [
-            m.foto ? el("img", { class: "member-foto", src: m.foto, alt: "", loading: "lazy" }) : null,
-            el("span", { class: "member-name", text: m.nombre }),
-            el("span", { class: "member-rol", text: m.rol })
-          ]),
-          el("div", { class: "member-detail" }, detalle)
-        ])
+    // Trayectoria (CV de Micaela)
+    var perfil = S.perfil;
+    setText("perfil-bio", perfil.bio);
+    setText("perfil-estudio", perfil.estudio);
+    var tl = $("lista-trayectoria");
+    if (tl) perfil.trayectoria.forEach(function (t) {
+      tl.appendChild(el("li", null, [
+        el("p", { class: "tl-head" }, [
+          el("span", { class: "tl-cargo", text: t.cargo }),
+          el("span", { class: "tl-periodo", text: t.periodo })
+        ]),
+        el("p", { class: "tl-lugar", text: t.lugar })
       ]));
     });
+    var fl = $("lista-formacion");
+    if (fl) perfil.formacion.forEach(function (f) { fl.appendChild(el("li", { text: f })); });
+    setText("perfil-software", "Software: " + perfil.software);
 
     // Contacto
     var c = S.contacto;
@@ -210,8 +194,6 @@
     if (mail) { mail.href = "mailto:" + c.email; mail.textContent = c.email; }
     setText("contacto-cobertura", c.cobertura);
 
-    // Imagen del hero: la portada es la del primer proyecto publicado
-    if (heroImg && publicados[0]) { heroImg.src = publicados[0].thumb; }
   }
 
   // Comparador antes / después: una foto encima de la otra, con un control deslizante

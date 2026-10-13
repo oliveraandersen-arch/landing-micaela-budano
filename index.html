@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>is.ARCH · Arquitectura, interiorismo y paisaje en Córdoba</title>
-  <meta name="description" content="is.ARCH: arquitectura, interiorismo y paisajismo en Córdoba. Remodelaciones, proyectos residenciales, legajos técnicos y visualización 3D.">
-  <meta property="og:title" content="is.ARCH · Arquitectura en Córdoba">
+  <title>Micaela Budano · Arquitecta en Córdoba</title>
+  <meta name="description" content="Micaela Budano, arquitecta en Córdoba. Trayectoria, proyectos, remodelaciones, interiorismo y visualización 3D.">
+  <meta property="og:title" content="Micaela Budano · Arquitecta en Córdoba">
   <meta property="og:description" content="Cada lugar tiene algo que decir antes de que lleguemos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +19,9 @@
 <header class="site-header" data-header>
   <a class="wordmark" href="#inicio" aria-label="is.ARCH, inicio">is.ARCH</a>
   <nav class="site-nav" aria-label="Principal">
+    <a href="#trayectoria">Trayectoria</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#servicios">Servicios</a>
-    <a href="#equipo">Equipo</a>
     <a href="#contacto" class="nav-cta">Contacto</a>
   </nav>
 </header>
@@ -31,18 +31,18 @@
   <!-- ============ Inicio ============ -->
   <section class="hero" aria-labelledby="hero-titulo">
     <div class="hero-copy">
+      <p class="hero-rol reveal" data-reveal id="hero-rol"></p>
       <h1 id="hero-titulo" class="hero-title">
-        <span class="line"><span>Cada lugar tiene algo que decir</span></span>
-        <span class="line"><span>antes de que lleguemos</span></span>
+        <span class="line"><span id="hero-nombre">Micaela Budano</span></span>
       </h1>
-      <p class="hero-sub reveal" data-reveal>Lo nuevo también puede tener historia.</p>
+      <p class="hero-sub reveal" data-reveal id="hero-titulo-frase"></p>
       <p class="hero-bajada reveal" data-reveal id="hero-bajada"></p>
       <a class="btn btn-magnetic reveal" data-reveal href="#contacto">
-        <span>Hablemos de tu idea</span>
+        <span>Hablemos de tu proyecto</span>
       </a>
     </div>
     <figure class="hero-media reveal" data-reveal>
-      <img id="hero-img" src="assets/img/cj/thumb.jpg" alt="Fachada de piedra y madera de Casa CJ, Barrio Jockey Club, Córdoba" width="1672" height="941">
+      <img id="hero-img" src="assets/img/equipo/micaela.jpg" alt="Micaela Budano, arquitecta" width="421" height="900">
     </figure>
   </section>
 
@@ -52,7 +52,23 @@
     <div class="manifesto-body" id="manifiesto"></div>
   </section>
 
-  <!-- ============ Proyectos propios ============ -->
+  <!-- ============ Trayectoria ============ -->
+  <section id="trayectoria" class="block split" aria-labelledby="t-trayectoria">
+    <div class="split-intro reveal" data-reveal>
+      <h2 id="t-trayectoria" class="h-display">Trayectoria</h2>
+      <p class="lede" id="perfil-bio"></p>
+      <p class="block-note" id="perfil-estudio"></p>
+    </div>
+    <div class="perfil-detalle reveal" data-reveal>
+      <h3 class="h-small">Experiencia</h3>
+      <ol class="timeline" id="lista-trayectoria"></ol>
+      <h3 class="h-small">Formación</h3>
+      <ul class="plain-list" id="lista-formacion"></ul>
+      <p class="tl-lugar" id="perfil-software"></p>
+    </div>
+  </section>
+
+  <!-- ============ Proyectos propios  <!-- ============ Proyectos propios ============ -->
   <section id="proyectos" class="block" aria-labelledby="t-proyectos">
     <header class="block-head reveal" data-reveal>
       <h2 id="t-proyectos">Proyectos</h2>
@@ -115,15 +131,6 @@
       <p class="block-note">Así trabajamos desde la primera charla hasta la obra.</p>
     </header>
     <ol class="process" id="lista-proceso"></ol>
-  </section>
-
-  <!-- ============ Equipo ============ -->
-  <section id="equipo" class="block" aria-labelledby="t-equipo">
-    <header class="block-head reveal" data-reveal>
-      <h2 id="t-equipo">Nuestro equipo</h2>
-      <p class="block-note">Un grupo de profesionales que entiende el diseño como un servicio al cuidado de las necesidades de cada cliente.</p>
-    </header>
-    <ul class="team" id="lista-equipo"></ul>
   </section>
 
   <!-- ============ Contacto ============ -->
