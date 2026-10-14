@@ -16,7 +16,7 @@ window.SITIO = {
   "proyectos": [
     {
       "id": "cj",
-      "titulo": "Casa CJ",
+      "titulo": "Remodelación en Jockey Club",
       "subtitulo": "Remodelación de vivienda con fachada de piedra, living y dormitorios en madera",
       "tipo": "Remodelación e interiorismo de vivienda",
       "lugar": "Barrio Jockey Club, Córdoba",
@@ -27,43 +27,43 @@ window.SITIO = {
       "galeria": [
         {
           "src": "assets/img/cj/01.jpg",
-          "alt": "Fachada de piedra con acceso y piso de adoquines, Casa CJ"
+          "alt": "Fachada de piedra con acceso y piso de adoquines, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/02.jpg",
-          "alt": "Piscina y jardín con árbol antiguo, Casa CJ"
+          "alt": "Piscina y jardín con árbol antiguo, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/07.jpg",
-          "alt": "Fachada de piedra entre árboles, Casa CJ"
+          "alt": "Fachada de piedra entre árboles, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/08.jpg",
-          "alt": "Escalera de madera y vidrio junto a muro de piedra, Casa CJ"
+          "alt": "Escalera de madera y vidrio junto a muro de piedra, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/03.jpg",
-          "alt": "Dormitorio con techo de madera y muro de piedra, Casa CJ"
+          "alt": "Dormitorio con techo de madera y muro de piedra, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/09.jpg",
-          "alt": "Dormitorio con cabecera de piedra y techo de madera, Casa CJ"
+          "alt": "Dormitorio con cabecera de piedra y techo de madera, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/04.jpg",
-          "alt": "Ventana con vista al comedor desde el exterior, Casa CJ"
+          "alt": "Ventana con vista al comedor desde el exterior, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/05.jpg",
-          "alt": "Vista exterior de la casa al atardecer, Casa CJ"
+          "alt": "Vista exterior de la casa al atardecer, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/06.jpg",
-          "alt": "Comedor con mesa de madera y muro de piedra, Casa CJ"
+          "alt": "Comedor con mesa de madera y muro de piedra, Remodelación en Jockey Club"
         },
         {
           "src": "assets/img/cj/10.jpg",
-          "alt": "Living con sofá modular y luz natural, Casa CJ"
+          "alt": "Living con sofá modular y luz natural, Remodelación en Jockey Club"
         }
       ],
       "antesDespues": {
@@ -73,7 +73,7 @@ window.SITIO = {
             "destacado": true,
             "antes": "assets/img/cj/antes-fachada.jpg",
             "despues": "assets/img/cj/thumb.jpg",
-            "alt": "Fachada antes y después de la remodelación, Casa CJ"
+            "alt": "Fachada antes y después de la remodelación, Remodelación en Jockey Club"
           }
         ],
         "generales": [
@@ -81,37 +81,37 @@ window.SITIO = {
             "etiqueta": "Patio posterior",
             "antes": "assets/img/cj/antes-patio.jpg",
             "despues": "assets/img/cj/05.jpg",
-            "alt": "Vista general del patio posterior, Casa CJ"
+            "alt": "Vista general del patio posterior, Remodelación en Jockey Club"
           },
           {
             "etiqueta": "Living",
             "antes": "assets/img/cj/antes-living.jpg",
             "despues": "assets/img/cj/10.jpg",
-            "alt": "Vista general del living, Casa CJ"
+            "alt": "Vista general del living, Remodelación en Jockey Club"
           },
           {
             "etiqueta": "Escalera y hall",
             "antes": "assets/img/cj/antes-escalera.jpg",
             "despues": "assets/img/cj/08.jpg",
-            "alt": "Vista general de la escalera y el hall, Casa CJ"
+            "alt": "Vista general de la escalera y el hall, Remodelación en Jockey Club"
           }
         ],
         "estadoOriginal": [
           {
             "src": "assets/img/cj/antes-acceso.jpg",
-            "alt": "Acceso antes de la remodelación, Casa CJ"
+            "alt": "Acceso antes de la remodelación, Remodelación en Jockey Club"
           },
           {
             "src": "assets/img/cj/antes-cocina.jpg",
-            "alt": "Cocina antes de la remodelación, Casa CJ"
+            "alt": "Cocina antes de la remodelación, Remodelación en Jockey Club"
           },
           {
             "src": "assets/img/cj/antes-living-2.jpg",
-            "alt": "Living con chimenea antes de la remodelación, Casa CJ"
+            "alt": "Living con chimenea antes de la remodelación, Remodelación en Jockey Club"
           },
           {
             "src": "assets/img/cj/antes-estar-alto.jpg",
-            "alt": "Estar en altura antes de la remodelación, Casa CJ"
+            "alt": "Estar en altura antes de la remodelación, Remodelación en Jockey Club"
           }
         ]
       },
@@ -119,7 +119,7 @@ window.SITIO = {
     },
     {
       "id": "aj",
-      "titulo": "Casa AJ",
+      "titulo": "Casa de piedra en la sierra",
       "subtitulo": "Vivienda con muro de piedra, escalera de madera y vistas a la sierra",
       "tipo": "Arquitectura residencial",
       "lugar": "Barrio Sierra Nueva, Mendiolaza",
@@ -130,27 +130,27 @@ window.SITIO = {
       "galeria": [
         {
           "src": "assets/img/aj/01.jpg",
-          "alt": "Acceso a la vivienda entre muros de piedra, Casa AJ"
+          "alt": "Acceso a la vivienda entre muros de piedra, Casa de piedra en la sierra"
         },
         {
           "src": "assets/img/aj/02.jpg",
-          "alt": "Puerta de ingreso de madera y vidrio, Casa AJ"
+          "alt": "Puerta de ingreso de madera y vidrio, Casa de piedra en la sierra"
         },
         {
           "src": "assets/img/aj/03.jpg",
-          "alt": "Estar con muro de piedra y techo de madera, Casa AJ"
+          "alt": "Estar con muro de piedra y techo de madera, Casa de piedra en la sierra"
         },
         {
           "src": "assets/img/aj/04.jpg",
-          "alt": "Escalera de madera con baranda de vidrio, Casa AJ"
+          "alt": "Escalera de madera con baranda de vidrio, Casa de piedra en la sierra"
         },
         {
           "src": "assets/img/aj/05.jpg",
-          "alt": "Ingreso con espejo de agua y revestimiento de piedra, Casa AJ"
+          "alt": "Ingreso con espejo de agua y revestimiento de piedra, Casa de piedra en la sierra"
         },
         {
           "src": "assets/img/aj/06.jpg",
-          "alt": "Cocina integrada con vista a la sierra, Casa AJ"
+          "alt": "Cocina integrada con vista a la sierra, Casa de piedra en la sierra"
         }
       ],
       "antesDespues": null,
@@ -158,7 +158,7 @@ window.SITIO = {
     },
     {
       "id": "fm",
-      "titulo": "Casa FM",
+      "titulo": "Casa con ventanal plegable en la sierra",
       "subtitulo": "Vivienda con cocina de ventanal plegable y vistas a las sierras",
       "tipo": "Arquitectura residencial",
       "lugar": "Barrio Sierra Nueva, Mendiolaza",
@@ -169,27 +169,27 @@ window.SITIO = {
       "galeria": [
         {
           "src": "assets/img/fm/01.jpg",
-          "alt": "Fachada con vegetación y entrada, Casa FM"
+          "alt": "Fachada con vegetación y entrada, Casa con ventanal plegable en la sierra"
         },
         {
           "src": "assets/img/fm/02.jpg",
-          "alt": "Cocina con ventanal que se pliega hacia el techo, Casa FM"
+          "alt": "Cocina con ventanal que se pliega hacia el techo, Casa con ventanal plegable en la sierra"
         },
         {
           "src": "assets/img/fm/03.jpg",
-          "alt": "Cocina con muebles de madera y gris, Casa FM"
+          "alt": "Cocina con muebles de madera y gris, Casa con ventanal plegable en la sierra"
         },
         {
           "src": "assets/img/fm/04.jpg",
-          "alt": "Dormitorio con ventanal al jardín, Casa FM"
+          "alt": "Dormitorio con ventanal al jardín, Casa con ventanal plegable en la sierra"
         },
         {
           "src": "assets/img/fm/05.jpg",
-          "alt": "Baño con ducha de vidrio y revestimiento, Casa FM"
+          "alt": "Baño con ducha de vidrio y revestimiento, Casa con ventanal plegable en la sierra"
         },
         {
           "src": "assets/img/fm/06.jpg",
-          "alt": "Living con ventanales y sofá, Casa FM"
+          "alt": "Living con ventanales y sofá, Casa con ventanal plegable en la sierra"
         }
       ],
       "antesDespues": null,
@@ -197,7 +197,7 @@ window.SITIO = {
     },
     {
       "id": "ft",
-      "titulo": "Casa FT",
+      "titulo": "Casa de doble altura en El Terrón",
       "subtitulo": "Vivienda con living de doble altura, chimenea y comedor con vinoteca",
       "tipo": "Arquitectura residencial",
       "lugar": "Barrio El Terrón, Mendiolaza",
@@ -208,15 +208,15 @@ window.SITIO = {
       "galeria": [
         {
           "src": "assets/img/ft/01.jpg",
-          "alt": "Living con doble altura, chimenea y biblioteca, Casa FT"
+          "alt": "Living con doble altura, chimenea y biblioteca, Casa de doble altura en El Terrón"
         },
         {
           "src": "assets/img/ft/02.jpg",
-          "alt": "Cocina de madera y gris con isla y vista al jardín, Casa FT"
+          "alt": "Cocina de madera y gris con isla y vista al jardín, Casa de doble altura en El Terrón"
         },
         {
           "src": "assets/img/ft/03.jpg",
-          "alt": "Living con sofás y ventanales al exterior, Casa FT"
+          "alt": "Living con sofás y ventanales al exterior, Casa de doble altura en El Terrón"
         }
       ],
       "antesDespues": null,
