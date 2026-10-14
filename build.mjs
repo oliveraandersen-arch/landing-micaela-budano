@@ -26,6 +26,7 @@ function head({ title, desc, url, image, prefix, bodyClass = "" }) {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}">
   <link rel="canonical" href="${esc(url)}">
+  <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Micaela Budano">
   <meta property="og:locale" content="es_AR">
