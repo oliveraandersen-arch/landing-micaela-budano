@@ -378,6 +378,7 @@ window.SITIO = {
     "whatsappTexto": "Escribime por WhatsApp",
     "email": "micabudano@hotmail.com",
     "instagram": "https://www.instagram.com/is.arch.arq/",
+    "linkedin": "https://www.linkedin.com/in/micaela-budano",
     "calendly": null,
     "ubicacion": "Mendiolaza, Córdoba"
   }

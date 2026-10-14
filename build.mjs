@@ -176,6 +176,7 @@ function indexPage() {
       <ul class="contact-links">
         <li><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></li>
         <li><a href="${esc(c.instagram)}" rel="noopener" target="_blank">Instagram · is.arch.arq</a></li>
+        ${c.linkedin ? `<li><a href="${esc(c.linkedin)}" rel="noopener" target="_blank">LinkedIn · Micaela Budano</a></li>` : ""}
       </ul>
       <p class="contact-foot">${esc(c.ubicacion)}</p>
     </div>
