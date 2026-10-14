@@ -251,6 +251,16 @@ window.SITIO = {
     }
   ],
   "colaboraciones": [],
+  // Qué hago (del CV). Lista corta, sin lenguaje de venta.
+  queHago: [
+    "Remodelaciones",
+    "Interiorismo residencial y comercial",
+    "Visualización 3D",
+    "Documentación técnica y legajos",
+    "Seguimiento de obra"
+  ],
+  interes: "Interés: diseño de espacios exteriores y paisajismo.",
+
   "perfil": {
     "bio": "Arquitecta con experiencia en desarrollo integral de proyectos, legajos técnicos, cómputos y comparativa de presupuestos. Trayectoria en estudio propio y en empresa constructora, con foco en documentación técnica precisa que garantiza la viabilidad constructiva de cada proyecto.",
     "trayectoria": [
