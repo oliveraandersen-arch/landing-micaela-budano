@@ -15,6 +15,84 @@ window.SITIO = {
   },
   "proyectos": [
     {
+      "id": "cb",
+      "titulo": "Remodelación casa Cuesta Blanca",
+      "subtitulo": "Remodelación con piso de porcelanato claro, galería ampliada y cocina conectada al comedor",
+      "tipo": "Remodelación de vivienda · render 3D",
+      "lugar": "Barrio Sierra Nueva, Mendiolaza",
+      "anio": 2025,
+      "publicado": true,
+      "thumb": "assets/img/cb/thumb.jpg",
+      "resumen": null,
+      "galeria": [
+        {
+          "src": "assets/img/cb/01.jpg",
+          "alt": "Living con techo de madera y muro de piedra, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/02.jpg",
+          "alt": "Living con sofás verdes y ventanales, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/03.jpg",
+          "alt": "Comedor con mesa de madera y vista a la cocina, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/04.jpg",
+          "alt": "Barra de cocina con banquetas y vista al patio, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/05.jpg",
+          "alt": "Casa con pileta y fogón de piedra, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/06.jpg",
+          "alt": "Fachada con pileta y fogón en el jardín, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/07.jpg",
+          "alt": "Galería con mesa de madera y techo de listones, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/08.jpg",
+          "alt": "Fachada de piedra y patio con adoquines, render de la remodelación Cuesta Blanca"
+        },
+        {
+          "src": "assets/img/cb/09.jpg",
+          "alt": "Vista exterior de la casa con árboles, render de la remodelación Cuesta Blanca"
+        }
+      ],
+      "antesDespues": null,
+      "planos": []
+    },
+    {
+      "id": "scm",
+      "titulo": "Mini Market San Carlos",
+      "subtitulo": "Interiorismo de un mini market en Córdoba: góndolas, sectores de bebidas, vinos y lácteos",
+      "tipo": "Interiorismo comercial · render 3D",
+      "lugar": "Córdoba",
+      "anio": "2025 – 2026",
+      "publicado": true,
+      "thumb": "assets/img/scm/thumb.jpg",
+      "resumen": null,
+      "galeria": [
+        {
+          "src": "assets/img/scm/01.jpg",
+          "alt": "Interior del mini market con góndolas de conservas y cajones de frutas, render del proyecto"
+        },
+        {
+          "src": "assets/img/scm/02.jpg",
+          "alt": "Interior del mini market con góndolas de snacks y sector de vinos, render del proyecto"
+        },
+        {
+          "src": "assets/img/scm/03.jpg",
+          "alt": "Fachada del mini market San Carlos, render del proyecto"
+        }
+      ],
+      "antesDespues": null,
+      "planos": []
+    },
+    {
       "id": "cj",
       "titulo": "Remodelación en Jockey Club",
       "subtitulo": "Remodelación de vivienda con fachada de piedra, living y dormitorios en madera",
