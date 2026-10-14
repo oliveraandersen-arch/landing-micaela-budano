@@ -67,13 +67,13 @@ function footer() {
 `;
 }
 
-function compare(par) {
+function compare(par, pre = "") {
   const wide = par.destacado ? " compare--wide" : "";
   return `<div class="ba-item${par.destacado ? " ba-item--feature" : ""}">
   <p class="ba-tag">${esc(par.etiqueta)}</p>
   <figure class="compare${wide}" style="--pos:50%">
-    <img class="cmp-after" src="${esc(par.despues)}" alt="${esc(par.alt)} (después)" loading="lazy">
-    <img class="cmp-before" src="${esc(par.antes)}" alt="${esc(par.alt)} (antes)" loading="lazy">
+    <img class="cmp-after" src="${pre}${esc(par.despues)}" alt="${esc(par.alt)} (después)" loading="lazy">
+    <img class="cmp-before" src="${pre}${esc(par.antes)}" alt="${esc(par.alt)} (antes)" loading="lazy">
     <span class="cmp-label cmp-l" aria-hidden="true">Antes</span>
     <span class="cmp-label cmp-r" aria-hidden="true">Después</span>
     <span class="cmp-handle" aria-hidden="true"></span>
@@ -192,8 +192,8 @@ function projectPage(p) {
   const ad = p.antesDespues;
   let adHtml = "";
   if (ad) {
-    const pares = (ad.pares || []).map(compare).join("");
-    const generales = (ad.generales || []).map(compare).join("");
+    const pares = (ad.pares || []).map((x) => compare(x, "../")).join("");
+    const generales = (ad.generales || []).map((x) => compare(x, "../")).join("");
     const orig = (ad.estadoOriginal || []).map((g) => `<figure class="reveal" data-reveal><img src="../${esc(g.src)}" alt="${esc(g.alt)}" loading="lazy"></figure>`).join("");
     adHtml = `
   <section class="before-after" aria-labelledby="t-ad">
